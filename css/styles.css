@@ -60,7 +60,7 @@ ul {
 
 /* хедер */
 .page-header {
-  padding: 25px 0;
+  /* padding: 25px 0; */
   border-bottom: 1px solid #ececec;
 }
 .main-nav {
@@ -70,6 +70,8 @@ ul {
 
 /* логотип */
 .logo {
+  margin-top: 24px;
+  margin-bottom: 25px;
   margin-right: 93px;
 
   color: var(--accent-color);
@@ -101,19 +103,19 @@ ul {
   display: flex;
 }
 .site-nav-link {
+  padding: 32px 0;
+  display: block;
+
   color: var(--title-text-color);
   font-weight: 500;
   line-height: 1.14;
   letter-spacing: 0.02em;
   text-decoration: none;
-  /* display: inline-block;
-  position: relative;
-  z-index: 1;
-  padding: 2em;
-  margin: -2em; */
 }
 .site-nav-link:hover,
 .site-nav-link:focus {
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
   color: var(--accent-color);
   font-weight: 500;
   line-height: 1.14;
@@ -128,12 +130,12 @@ ul {
 }
 .site-nav-link-thumb::after {
   content: "";
-  display: inline-block;
+  display: block;
   position: absolute;
-  top: 0;
   left: 0;
+  bottom: 0;
 
-  width: 48px;
+  width: 100%;
   height: 4px;
   border-radius: 2px;
   background-color: var(--accent-color);
@@ -159,6 +161,8 @@ ul {
 }
 .cont-nav-link:hover,
 .cont-nav-link:focus {
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
   color: var(--accent-color);
   text-decoration: none;
 }
@@ -185,6 +189,7 @@ ul {
 }
 .cont-nav-link:hover .footer-contacts-icon,
 .cont-nav-link:focus .footer-contacts-icon {
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
   fill: var(--accent-color);
 }
 
@@ -231,6 +236,9 @@ ul {
 }
 .hero-button:hover,
 .hero-button:focus {
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
   color: var(--primary-white);
   background-color: #188ce8;
 }
@@ -389,11 +397,17 @@ ul {
 }
 .icon-link:hover,
 .icon-link:focus {
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
   background-color: var(--accent-color);
   fill: white;
 }
 .icon-link:hover .icon-img,
 .icon-link:focus .icon-img {
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
   fill: white;
 }
 
@@ -455,6 +469,8 @@ ul {
 }
 .clients-icon:hover,
 .clients-icon:focus {
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
   fill: var(--accent-color);
 }
 .filter {
@@ -466,18 +482,30 @@ ul {
 }
 .filter-button:hover,
 .filter-button:focus {
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: border-radius 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
     0px 2px 2px rgba(0, 0, 0, 0.12);
   border-radius: 4px;
 }
 .client-link:hover,
 .client-link:focus {
+  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: border-radius 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
   border: 1px solid #2196f3;
+  transition: border-radius 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
   border-radius: 4px;
   fill: white;
 }
 .client-link:hover .clients-icon,
 .client-link:focus .clients-icon {
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
   fill: var(--accent-color);
 }
 
@@ -507,6 +535,8 @@ ul {
 .filter-button:focus {
   color: var(--primary-white);
   background-color: var(--accent-color);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .projects {
   padding-bottom: 94px;
@@ -533,6 +563,9 @@ ul {
   padding-left: 0;
 }
 .projects-block {
+  position: relative;
+  overflow: hidden;
+
   margin-right: 30px;
   margin-bottom: 30px;
   width: 370px;
@@ -540,6 +573,8 @@ ul {
 }
 .projects-block:hover,
 .project-block:focus {
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
 }
@@ -553,12 +588,17 @@ ul {
   margin-right: 0;
 }
 .projects-block-thumb {
-  position: relative;
+  /* position: relative; */
+  /* overflow: hidden; */
+  width: 370px;
+  height: 294px;
 }
 .projects-block-thumb::before {
   position: absolute;
   top: 0;
-  opacity: 0;
+  opacity: 1;
+  transform: translateY(140%);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
   content: "";
   display: inline-block;
@@ -568,6 +608,7 @@ ul {
 }
 .projects-block-thumb:hover::before {
   opacity: 1;
+  transform: translate(0);
 }
 .projects-block-thumb-txt {
   position: absolute;
@@ -575,6 +616,8 @@ ul {
   top: 63px;
   left: 24px;
   opacity: 0;
+  transform: translateY(140%);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
   width: 322px;
   height: 168px;
@@ -586,6 +629,7 @@ ul {
 }
 .projects-block-thumb:hover .projects-block-thumb-txt {
   opacity: 1;
+  transform: translateY(0);
 }
 
 .page-footer {
@@ -654,6 +698,7 @@ ul {
 }
 .join .icon-link:hover,
 .join .icon-link:focus {
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   background-color: var(--accent-color);
 }
 .join .icon-img {
